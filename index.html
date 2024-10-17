@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>GreenAPI</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="instance-container">
+        <div class="instance-container__form-input">
+          <form class="instance-container__form-input__instance-info" id="instanceInfoForm" action="" method="get">
+            <input type="text" name="apiUrl" id="apiUrl" placeholder="apiUrl" />
+            <input type="text" name="idInstance" id="idInstance" placeholder="idInstance" />
+            <input type="text" name="ApiTokenInstance" id="apiTokenInstance" placeholder="apiTokenInstance" />
+            <div class="form-input__btns instance-info__btns">
+              <input class="btn" type="button" id="GetSettingsBtn" onclick="getSettings()" value="Get settings">
+              <input class="btn" type="button" id="getStateInstanceBtn" onclick="getStateInstance()" value="Get State Instance">
+            </div>
+          </form>
+          <script src="./script.js"></script>
+          <form class="instance-container__form-input__send-message-form" id="sendMessageForm" action="" method="post">
+            <input type="text" name="chatId" id="chatId" placeholder="chatId" />
+            <input type="text" name="message" id="message" placeholder="message" />
+            <div class="form-input__btns send-message-form__btns">
+              <input class="btn" type="button" id="sendMessageBtn" onclick="sendMessage()" value="Send Message">
+            </div>
+          </form>
+
+          <form class="instance-container__form-input__send-file-form" id="sendFileByUrlForm" action="" method="post">
+            <input type="text" name="chatId" id="url_chatId" placeholder="chatId" />
+            <input type="text" name="url_file" id="url_file" placeholder="file URL" />
+            <input type="text" name="file-name" id="file_name" placeholder="file name" />
+            <div class="form-input__btns send-file-form__btns">
+              <input class="btn" type="button" id="sendFileByUrlBtn" onclick="sendFileByUrl()" value="Send File By URL">
+            </div>
+          </form>
+        </div>
+
+        <div class="instance-container__output">
+          <p class="answer-text" id="answer">Ответ:</p>
+          <div class="instance-container__output__output">
+            <div>
+              <p class="innerObjectLine">
+                <output name = "result" id='result' for=""></output>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
